@@ -1,0 +1,288 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages for better formatting
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{hyperref}
+
+% Page margins
+\geometry{margin=0.5in}
+
+% Line spacing
+\setstretch{1.1}
+
+% Custom column types for tables
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\begin{document}
+
+\textbf{Nina Zhang}
+
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{0.32\linewidth}
+  >{\raggedright\arraybackslash}p{0.32\linewidth}
+  >{\raggedright\arraybackslash}p{0.32\linewidth}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Email: ninazeng@umich.edu
+\end{quote}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\url{github.com/zemaye1}\\
+\url{zemaye.net}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\begin{quote}
+Cell Phone: (646) 648-7593
+\end{quote}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\end{longtable}
+
+\begin{quote}
+\textbf{EDUCATION}\\
+\emph{\textbf{Bachelor of Science}, Computer Science} May 2015
+\textbf{University of Michigan}, Ann Arbor, MI \emph{College of
+Engineering}
+
+\textbf{TECHNICAL SKILLS}\\
+\emph{Programming Languages} \emph{Software \& Tools}\\
+Experienced using: C++, C, Python, JavaScript, SQL Apache Kafka, Solr,
+Docker, QEMU, Jenkins, Bash, Linux, Nginx, OpenStack, Pandas,
+Scikit-Learn Familiar with: Perl, Verilog, Ruby, R SCons, Ansible,
+Open-source FPGA toolchains
+
+\textbf{WORK EXPERIENCE}\\
+
+\textbf{Intercontinental Exchange - owner of New York Stock Exchange} C++ developer 2024-2025
+\begin{itemize}
+\item In C++ troubleshooted unenriched messages coming down from the backend and fixed multiple bugs on a massively distributed datastream pipeline with multiple sinks and sources of high throughput international financial data streams constituting trades from nearly every exchange in the world with the advanced data structures of the C++ standard library 
+\item Profiled and researched the asynchronous code in datastream pipeline graphing out performance metrics in C++.
+\item Built custom metric included binaries using thread sanitizer and helgrind to identify contention and testing for performance on live data and identifying lock unlock semantics which were causing a slowdown
+\end{itemize}
+
+\textbf{Open Source Exploration} mid 2020-2024
+\begin{itemize}
+\item Attended conference in
+Styria, Graz focusing on different computer security topics over the
+course of a week
+\item Independently worked on operating systems projects to
+gain a richer understanding of machines
+\item Researched Grand Unified Bootloader (GRUB) to reset the root password on
+computers on which it was forgotten
+\item Followed along the libre-soc project synthesizing their work on an FPGA
+\end{itemize}
+
+\textbf{Bloomberg Terminal Instant Bloomberg (IB) Realtime Messaging
+System} 2015-mid 2020
+
+\textbf{Infrastructure Engineer} : \emph{Performant Distributed Systems
+in C++}
+\begin{itemize}
+\item Deployment, operation, maintenance, and migration to next-gen realtime
+messaging platform -- highly available and transactional distributed
+system compliant with auditing requirements of global financial
+regulations. The Bloomberg terminal is Bloomberg's flagship product
+trading platform which accounts for a large percentage of daily trading
+volume around the world with over 300,000 subscribers taking advantage
+of Bloomberg's world-class service.
+
+\item Responsible for maintenance, deployment of the framework for running the
+Instant Bloomberg real-time mes- saging and trading platform operating
+in an environment with strong auditing and compliance requirements.
+Participated in client migration from legacy to new infrastructure with
+zero downtime.
+
+\item Increased system throughput by over 5x enabling growth in userbase
+\item Built a general purpose filter framework with composable message filters
+so that new filters could be added with quick code snippets to drop
+messages of a certain class with particular traits in message streams
+Wrote reconnect logic for RabbitMQ message streams with exponential
+backoff for migratory path backup system
+\item Greatly improved dev environment experience on the shared dev
+distributed systems setup by writing a Perl script which automated new
+config deployment with hourly Jenkins builds: configs were often edited
+and dev environment needed to pick up the new changes so that anyone
+testing on that environment would have a working enviornment and be
+testing on the latest build.
+\end{itemize}
+
+\textbf{Bloomberg Reliability Engineer}:
+\emph{Monitoring Frameworks: Chaos Testing System in Python using Kafka,
+Pandas Time-series Analysis}
+\begin{itemize}
+\item Using Bloomberg's monitoring framework which produced timeseries data,
+wrote an metric tool in Pandas for teams looking to do trend analysis
+and answer questions about their metric streams regarding uptime and
+traffic of their services. Time series data-wrangling.
+
+\item Performed independent research to create a robust notion of uptime using
+historical trends, seasonality, and data mining to define realistic
+SLI/SLO's
+\item Researched and presented a paper on fault management strategies and null
+intervals to illustrate the importance of thinking about the systems are
+that are doing the monitoring
+\item Rearchitected the framework's heartbeat protocol of the Chaos Testing
+Framework for better fault handling by getting rid of SYN-ACK and using
+heartbeats with timestamps to enable a stateless controller
+\end{itemize}
+
+\textbf{Bloomberg Developer Experience Features}: \emph{Chromium Shims
+in Javascript} 2017-Sep 2020
+\begin{itemize}
+\item Lead developer on producing the first working implementation of a chat
+entry on top of blink that did more than parse plaintext strings, opting
+instead for dynamic composition of metadata as a step towards rich text
+entry. Found a bug in Chromium which was submitted and fixed.
+
+\item Responsible for deployment, productionization, and maintenance of
+next-gen chat entry
+\item Independently architected a chat entry framework that allows metadata to
+be mapped to parts of text by extracting editing operations from cursor
+movement to construct a data model
+\item Beautifully integrated framework, slim javascript layer on top of the
+blink engine, thoughtful event catching to preserve native speeds and
+reactive workflows. Became the basis for all metadata workflows and the
+celebrated at-mentions product which has seen strong adoption. Built out
+the plumbing for rich messages in C++.
+
+See
+businessinsider.com/bloomberg-terminal-instant-chat-changes-updates-collaboration-messenger-2021-9
+\item Introduced containerization and local development to the team
+\item Curated and moderated a technical chat list that was company-recognized
+\end{itemize}
+
+\textbf{Bloomberg Full Stack Work}: \emph{API Design and Microservice
+Architecture}
+\begin{itemize}
+\item Collaborated in designing an API for external teams to post into IB,
+thinking for extensibility by following a domain driven model. Then used
+the API in architecting the World Problem (WP) framework for incident
+management to create self joinable rooms from inside a WP ticket. On
+production since 2020, aiding in solving over 1700 World Problems
+\item Responsible for architecting, maintenance, operations, API design of
+three new frameworks under the new paradigm: Third-party Apps, World
+Problem Chat, @Mentions which were all on stable releases
+\end{itemize}
+
+\textbf{Bloomberg Data Scientist}: \emph{Dataset creation and NLP
+algorithms in Python, Pandas, Scikit-Learn} 2018 - 2019
+\begin{itemize}
+\item Accepted into
+ML incubator lead by David Rosenberg under office of the CTO. See
+https://bloom.bg/2ui2T4q
+\item Built search result indexer using
+learning-to-rank algorithm using lambdaMART; advised by NLP Architect
+Amanda Stent
+\item Novel dataset creation method, labeling, and cleaning from stack
+exchange question-answer-pairs and technical chat discussions
+\item Returned relevant results within the first 3 hits on average for complex
+proprietary queries for good recall and precision
+\end{itemize}
+
+\textbf{Plex Systems IoT Engineer}: \emph{Manufacturing Cloud Intern
+Project in C++, Python, and Javascript} 2014
+\begin{itemize}
+\item Wrote a plugin architecture to
+capture weight, collect signatures for use at distribution centers
+\item Packaged it and wrote installers for deployment at manufacturing sites
+for Windows and Mac
+\item Maintained upgrade path for new versions
+\end{itemize}
+\end{quote}
+
+\textbf{Skills}
+\begin{itemize}
+\item Full Software Development Life Cycle
+\item Proficiency in Python, C++ and Javascript
+\item Adhere to rigourous testing principles -- integration, unit,
+end-to-end
+\item Triaging and monitoring, logging and tracing, log aggregation and
+extraction, Hourly builds and integration tests
+\item Continuous Integration and Deployment
+\item SQL and Database Design
+\item Distributed Systems
+\item NLP and Machine Learning
+\item Experienced with Pandas and dataset generation
+\item Microservice Architecture
+\item Cross-functional Requirements Gathering and Triaging
+\item Agile and Scrum
+\item Open Source Enthusiast and Open Hardware Tinkerer
+\end{itemize}
+
+\textbf{CONTRIBUTIONS TO OPEN SOURCE COMMUNITIES}
+
+\begin{quote}
+1. Emacs Package Developer \emph{Status: awaiting merge}
+
+\item developed fix for emacs-calfw, a popular libre text calendar.
+Collaborators improved upon it.\item  See
+github.com/kiwanami/emacs-calfw/pull/134 and
+github.com/kiwanami/emacs-calfw/issues/124
+
+2. Chromium Bug \emph{Status: fixed and merged}
+
+\item Found bug looking at the Chromium source where it appended a BRElement
+to the text entry text field when the last character is a carriage
+return. Had teammate submit bug.
+
+\item bugs.chromium.org/p/chromium/issues/detail?id=882614
+
+3. Arch Linux enthusiast and Forum-goer
+
+4. Longtime supporter and member of FSF
+\end{quote}
+
+\textbf{CONFERENCES}\\
+Security Week at Graz University of Technology 2022 Styria, Austria
+
+\begin{quote}
+NYAS Machine Learning Symposium 2018 New York, NY
+
+MHACKS IV:\emph{Productivity list with vim bindings} Ann Arbor, MI
+
+MHACKS V:\emph{VR game with Myo armband and Oculus. Magic casting and A*
+algorithms for enemy tracking}
+\end{quote}
+
+\textbf{ACADEMICS}
+\begin{itemize}
+\item \textbf{Graduate:} Cryptography with Kevin Compton, Algorithms with Seth
+Pettie, Computer Network Security with Alex Halderman, Data Mining
+
+\item \textbf{Undergraduate:} Computer Organization, Data Structures and
+Algorithms, Computer Security, Intro to Logic Design, Linear Algebra
+\end{itemize}
+
+\textbf{WHITE PAPERS}
+
+1. Dana Wilson, Shengfa Lin, Kyle Mattimore, \textbf{Nina Zeng}.
+``Thanks for the Hack: Analyzing Open-Source Programming Practices''.
+
+\emph{Custom dataset created from public git repos to get statistics on
+how often C vulnerabilties appear in the wild.}
+
+2. Jonathan Trossbach, \textbf{Nina Zeng}. ``Critical Reading of Gabriel
+Somlo's ``Toward a Trustable, Self-Hosting Computer System''\,''.
+
+\emph{Exploring a possible future paradigm in supply chain security for
+computer hardware}
+\\
+\textbf{PERSONAL INTERESTS}
+\emph{Dancing, Barefoot Running, Weight Lifting, Linux, Constructivist
+AI}
+\emph{Started a Women in Tech meetup in NYC; ran a bookclub for software
+engineers for several years} Book list included:
+\begin{itemize}
+\item Design Patterns
+\item The Pragmatic Programmer
+\item 7 Languages in 7 Days
+\item Designing Data-intensive Applications
+\end{itemize}
+
+\end{document}
